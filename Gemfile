@@ -48,6 +48,15 @@ group :development, :test do
   gem 'faker'
 end
 
+# Install Devise for authentication
 gem 'devise'
+
+# Devise doesn't include token authentication out of the box, so we'll use the devise-jwt gem.
 gem 'devise-jwt', '~> 0.7.0'
+
+# Rails blocks cross-origin requests out of the box.
+# To access our API from a different URL, we need to install the rack-cors gem.
 gem 'rack-cors'
+
+# We'll use the jsonapi-rails gem to return our models as valid JSON:API objects.
+gem 'jsonapi-rails'
