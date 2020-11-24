@@ -49,19 +49,20 @@ group :development, :test do
 end
 
 group :test do
+  # Our tests will use RSpec.
 	gem 'rspec-rails'
+  # We'll use factory_bot_rails to create fixtures to use in our tests.
   gem 'factory_bot_rails'
+  # The jsonapi-rspec gem provides some neat matchers for JSON:API responses.
+  gem 'jsonapi-rspec'
 end
 
 # Install Devise for authentication
 gem 'devise'
-
 # Devise doesn't include token authentication out of the box, so we'll use the devise-jwt gem.
 gem 'devise-jwt', '~> 0.7.0'
-
 # Rails blocks cross-origin requests out of the box.
 # To access our API from a different URL, we need to install the rack-cors gem.
 gem 'rack-cors'
-
 # We'll use the jsonapi-rails gem to return our models as valid JSON:API objects.
 gem 'jsonapi-rails'
