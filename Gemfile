@@ -49,3 +49,4 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'devise-jwt', '~> 0.7.0'
